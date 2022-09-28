@@ -1,0 +1,14 @@
+.navbar{
+    background-color:  #ffde2f;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.navbar img{
+ width: 90px;
+ height: 40px;
+ padding: 12px 120px;
+}
+.navbar>div:nth-child(2){
+    padding:12px 120px;
+}

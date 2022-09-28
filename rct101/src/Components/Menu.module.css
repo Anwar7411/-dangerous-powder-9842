@@ -1,0 +1,16 @@
+.menu{
+   display: grid;
+   justify-content: flex-start;
+   font-size: 20px;
+   color: #000;
+   text-align: start;
+   font-family: 'Roboto Slab',sans-serif;
+   gap: 20px;
+   
+}
+.menu>div:hover{
+    background-color: #ffde2f;
+    
+}
+
+
