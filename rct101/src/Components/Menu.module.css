@@ -8,9 +8,12 @@
    gap: 20px;
    
 }
+.menu>div{
+    width: 300px;
+    padding: 6px;
+}
 .menu>div:hover{
     background-color: #ffde2f;
-    
 }
 
 

@@ -2,13 +2,14 @@
     background-color:  #ffde2f;
     display: flex;
     justify-content: space-between;
-    
 }
 .navbar img{
- width: 90px;
- height: 40px;
- padding: 12px 120px;
+    margin-left: 90px;
+ width: 100px;
+ height: 50px;
+ padding: 8px 0px;
 }
 .navbar>div:nth-child(2){
-    padding:12px 120px;
+  margin-right: 80px;
+  margin-top: 10px;
 }

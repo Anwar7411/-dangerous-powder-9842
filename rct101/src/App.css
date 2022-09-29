@@ -3,14 +3,14 @@
 }
 .Appcomponent{
   margin: auto;
-width: 80%;
+width: 90%;
 display: flex;
 justify-content: space-between;
-border: 1px solid green;
+gap:20px;
+margin-top: 20px;
 }
 .Appcomponent>div:nth-child(1){
-  width:300px;
-  border: 1px solid brown;
+  width:250px;
   position: relative;
 }
 
