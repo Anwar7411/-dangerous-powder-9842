@@ -23,7 +23,7 @@ const Allroutes = () => {
         <Route path="/ViralNews" element={<ViralNews />}></Route>
         <Route path="/Sports" element={<Sports />}></Route>
         <Route path="/World" element={<World />}></Route>
-        <Route path="/:id" element={<SingleNews />}></Route>
+        <Route path="/SingleNews/:id" element={<SingleNews />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
     </Routes>
   )

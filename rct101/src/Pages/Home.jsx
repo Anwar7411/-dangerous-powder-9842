@@ -5,15 +5,15 @@ import { Flex, Container, Grid } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react'
 const Home = () => {
   return (
-    <Container maxW={"1400px"}  mt="15px">
-      <Grid templateColumns={"repeat(3,1fr)"}gap={5}>
+    <Container maxW={"1400px"}  mt="30px">
+      <Grid templateColumns={"repeat(3,1fr)"} gap={5}>
         <Box >
           <Menu />
         </Box>
-        <Box w="700px">
+        <Box w="800px">
           <News />
-        </Box>
-        <Box w="300px">
+        </Box>     
+        <Box w="200px">
           <News />
         </Box>
       </Grid>

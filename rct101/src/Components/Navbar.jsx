@@ -6,7 +6,7 @@ const Navbar = () => {
   const navigate=useNavigate();
   return (
     <div className={styles.navbar}>
-        <div >
+        <div style={{cursor:"pointer"}}>
             <img src="https://english.cdn.zeenews.com/static/apprun/dna/icons/logodna.png" alt="logo" onClick={()=>navigate("/")}/>
         </div>
         <div>
