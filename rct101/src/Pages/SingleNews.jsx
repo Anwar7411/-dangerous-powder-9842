@@ -9,16 +9,16 @@ import News from '../Components/News'
 
 const SingleNews = () => {
     const [data,setData]=useState([]);
-    const[isLoad,setIsLoad]=useState(false);
+    const[isLoading,setIsLoading]=useState(false);
     const navigate=useNavigate();
     const parm=useParams();
     const getData=()=>{
         return axios.get("https://newsapi.org/v2/everything?q=bitcoin&apiKey=6215e226f88a44f5a2cc01111177a3e3")
     }
     useEffect(()=>{
-        setIsLoad(true)
+        setIsLoading(true)
         getData().then((res)=>{setData(res)})
-        setIsLoad(false);
+        setIsLoading(false);
     },[])
    const num=Number(parm.id);
     let val= data?.data?.articles.filter((e,i)=>{
@@ -42,17 +42,17 @@ const SingleNews = () => {
                     "The European Union on Monday said it put forward a final text to revive the 2015 Iran nuclear deal as four days of indirect talks between U.S. and Iranian officials wrapped up in Vienna.",
                     "Under the 2015 agreement, Iran curbed its nuclear program in return for relief from U.S., EU and U.N. sanctions. But former U.S. President Donald Trump reneged on the nuclear deal in 2018 and restored harsh U.S. sanctions, prompting Tehran to start violating the agreement’s nuclear limits about a year later."
                   ]
-     if(isLoad===true){
-        console.log(isLoad);
+     if(isLoading===true){
+        console.log(isLoading);
           <Loader/>       
           } 
   return (
-     <Container maxW={"1400px"}  mt="30px">
+     <Container maxW={"1400px"}  mt="80px">
      <Grid templateColumns={"repeat(3,1fr)"} gap={7}>
        <Box >
          <Menu />
        </Box>
-       <Box w="900px">
+       <Box w="900px" ml="300px">
        { val?.map((e)=>(
         <Box>
         <Text textAlign="start" pb="8px" fontSize="23px">{e.description}</Text>

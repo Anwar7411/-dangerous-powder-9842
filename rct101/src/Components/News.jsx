@@ -6,19 +6,18 @@ import { Box, Image,Text } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
 const News = () => {
     const [data,setData]=useState([]);
-    const[load,setLoad]=useState(false);
+    const[isLoading,setIsLoading]=useState(true);
     const navigate=useNavigate();
     const getData=()=>{
         return axios.get("https://newsapi.org/v2/everything?q=bitcoin&apiKey=6215e226f88a44f5a2cc01111177a3e3")
     }
     useEffect(()=>{
-        setLoad(true);
-        getData().then((res)=>{setData(res)})
-        setLoad(false);
+        setIsLoading(true);
+        getData().then((res)=>{setData(res)}).finally(()=>(setIsLoading(false)));
     },[])
    
-    if(load){
-         <Loader/>
+    if(isLoading){
+        return <Loader />
         } 
   
   return (
@@ -27,6 +26,7 @@ const News = () => {
     <Box mb="20px" 
     onClick={()=>{navigate(`/SingleNews/${i}`)}}
     style={{cursor:"pointer"}}
+    boxShadow='dark-lg'
     >
         <Image src={e.urlToImage} alt='img' mb="10px" />
         <Text >{e.title}</Text>
