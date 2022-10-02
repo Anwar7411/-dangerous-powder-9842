@@ -11,20 +11,23 @@ import ViralNews from './ViralNews'
 import Sports from './Sports'
 import World from './World'
 import SingleNews from './SingleNews'
+import Login from './Login'
+import Private from './Private'
 const Allroutes = () => {
   return (
     <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/Entertainment" element={<Entertainment />}>Entertainment</Route>
-        <Route path="/Education" element={<Education />}></Route>
-        <Route path="/LatestNews" element={<LatestNews />}></Route>
-        <Route path="/LifeStyle" element={<LifeStyle />}></Route>
-        <Route path="/Photos" element={<Photos />}></Route>
-        <Route path="/ViralNews" element={<ViralNews />}></Route>
-        <Route path="/Sports" element={<Sports />}></Route>
-        <Route path="/World" element={<World />}></Route>
-        <Route path="/SingleNews/:id" element={<SingleNews />}></Route>
+        <Route path="/" element={<Private><Home /></Private>}></Route>
+        <Route path="/Entertainment" element={<Private><Entertainment /></Private>}>Entertainment</Route>
+        <Route path="/Education" element={<Private><Education /></Private>}></Route>
+        <Route path="/LatestNews" element={<Private><LatestNews /></Private>}></Route>
+        <Route path="/LifeStyle" element={<Private><LifeStyle /></Private>}></Route>
+        <Route path="/Photos" element={<Private><Photos /></Private>}></Route>
+        <Route path="/ViralNews" element={<Private><ViralNews /></Private>}></Route>
+        <Route path="/Sports" element={<Private><Sports /></Private>}></Route>
+        <Route path="/World" element={<Private><World /></Private>}></Route>
+        <Route path="/SingleNews/:id" element={<Private><SingleNews /></Private>}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
+        <Route path="/Login" element={<Login />}></Route>
     </Routes>
   )
 }
